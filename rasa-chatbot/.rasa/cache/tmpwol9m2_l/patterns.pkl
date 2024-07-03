@@ -1,0 +1,14 @@
+[
+  {
+    "name": "problem_title",
+    "pattern": "(\\bstreetlight\\ out\\b|\\bnot\\ working\\b|\\bissue\\ with\\ streetlamp\\b|\\bproblem\\ with\\ public\\ lighting\\b)"
+  },
+  {
+    "name": "problem_description",
+    "pattern": "(\\bThe\\ streetlight\\ on\\ Main\\ Street\\ has\\ been\\ out\\ for\\ a\\ week\\.\\b|\\bPark\\ Avenue\\ streetlight\\ is\\ flickering\\ intermittently\\.\\b|\\bThe\\ streetlamp\\ on\\ Elm\\ Street\\ is\\ completely\\ dark\\.\\b|\\bPublic\\ lighting\\ on\\ Maple\\ Avenue\\ is\\ not\\ functioning\\ at\\ all\\.\\b)"
+  },
+  {
+    "name": "location_address",
+    "pattern": "(\\b123\\ Main\\ Street\\b|\\bPark\\ Avenue\\b|\\bElm\\ Street\\b|\\bMaple\\ Avenue\\b)"
+  }
+]
