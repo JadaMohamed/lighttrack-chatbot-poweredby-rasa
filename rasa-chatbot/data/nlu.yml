@@ -1,110 +1,109 @@
 version: "3.1"
 
 nlu:
+  - intent: light_complaint
+    examples: |
+      - Il y a un [lampadaire éteint]{"entity": "priority_indicator"} près de [456 Avenue Atlantique à Agadir]{"entity": "location"}
+      - La lumière publique sur [Rue de Marrakech]{"entity": "location"} [ne fonctionne pas]{"entity": "priority_indicator"}
+      - Je signale un [problème avec le lampadaire]{"entity": "priority_indicator"} sur [Boulevard Hassan II à Agadir]{"entity": "location"}
+      - [Problème avec l'éclairage public]{"entity": "priority_indicator"} à l'intersection de [Avenue des F.A.R.]{"entity": "location"} et [Rue de Paris]{"entity": "location"}
+      - Le lampadaire sur [Rue des Consuls]{"entity": "location"} [est éteint depuis une semaine]{"entity": "priority_indicator"}
+      - La lumière publique à [Souk El Had d'Agadir]{"entity": "location"} clignote par intermittence
+      - Le lampadaire près de la [Marina d'Agadir]{"entity": "location"} est [complètement éteint]{"entity": "priority_indicator"}
+      - L'éclairage public sur [Avenue Mohammed V]{"entity": "location"} [ne fonctionne pas du tout]{"entity": "priority_indicator"}
+      - Il n'y a [pas de lumière]{"entity": "priority_indicator"} sur [Rue de la Plage près de la plage]{"entity": "location"}
+      - Le lampadaire sur [Avenue des Forces Armées Royales]{"entity": "location"} [est éteint depuis des jours]{"entity": "priority_indicator"}
+      - La lumière publique sur [Rue de la Mosquée à Agadir]{"entity": "location"} a [besoin d'être réparée]{"entity": "priority_indicator"}
+      - Le lampadaire à l'angle de [Avenue Abderrahim Bouabid]{"entity": "location"} et [Rue Ibn Khaldoun]{"entity": "location"} est cassé
+      - Les lumières sur [Boulevard du 20 Août]{"entity": "location"} [ne fonctionnent pas]{"entity": "priority_indicator"}
+      - L'éclairage public près des ruines d'[Agadir Oufella]{"entity": "location"} [est éteint]{"entity": "priority_indicator"}
+      - [Lampadaire éteint]{"entity": "priority_indicator"} près du [Stade Al Inbiaate sur Rue de Fès]{"entity": "location"}
 
-- intent: light_complaint
-  examples: | 
-    - Il y a un [lampadaire éteint]{"entity": "priority_indicator"} près de [456 Avenue Atlantique à Agadir]{"entity": "location"}
-    - La lumière publique sur [Rue de Marrakech]{"entity": "location"} [ne fonctionne pas]{"entity": "priority_indicator"}
-    - Je signale un [problème avec le lampadaire]{"entity": "priority_indicator"} sur [Boulevard Hassan II à Agadir]{"entity": "location"}
-    - [Problème avec l'éclairage public]{"entity": "priority_indicator"} à l'intersection de [Avenue des F.A.R. et Rue de Paris]{"entity": "location"}
-    - Le lampadaire sur [Rue des Consuls]{"entity": "location"} [est éteint depuis une semaine]{"entity": "priority_indicator"}
-    - La lumière publique à [Souk El Had d'Agadir]{"entity": "location"} clignote par intermittence
-    - Le lampadaire près de [la Marina d'Agadir]{"entity": "location"} est [complètement éteint]{"entity": "priority_indicator"}
-    - L'éclairage public sur [Avenue Mohammed V]{"entity": "location"} [ne fonctionne pas du tout]{"entity": "priority_indicator"}
-    - Il n'y a [pas de lumière]{"entity": "priority_indicator"} sur [Rue de la Plage près de la plage]{"entity": "location"}
-    - Le lampadaire sur [Avenue des Forces Armées Royales]{"entity": "location"} [est éteint depuis des jours]{"entity": "priority_indicator"}
-    - La lumière publique sur [Rue de la Mosquée à Agadir]{"entity": "location"} a [besoin d'être réparée]{"entity": "priority_indicator"}
-    - Le lampadaire à l'angle de [Avenue Abderrahim Bouabid]{"entity": "location"} et [Rue Ibn Khaldoun]{"entity": "location"} est cassé
-    - Les lumières sur [Boulevard du 20 Août]{"entity": "location"} [ne fonctionnent pas]{"entity": "priority_indicator"}
-    - L'éclairage public près des ruines d'[Agadir Oufella]{"entity": "location"} [est éteint]{"entity": "priority_indicator"}
-    - [Lampadaire éteint]{"entity": "priority_indicator"} près du [Stade Al Inbiaate sur Rue de Fès]{"entity": "location"}
+  - intent: greet
+    examples: |
+      - salut
+      - bonjour
+      - salutations
+      - bonjour à vous
+      - bon matin
+      - bonsoir
+      - moin
+      - salut là
+      - allons-y
+      - salut mon pote
+      - bonmatin
+      - bonsour
+      - bon après-midi
 
-- intent: greet
-  examples: |
-    - salut
-    - bonjour
-    - salutations
-    - bonjour à vous
-    - bon matin
-    - bonsoir
-    - moin
-    - salut là
-    - allons-y
-    - salut mon pote
-    - bonmatin
-    - bonsour
-    - bon après-midi
+  - intent: goodbye
+    examples: |
+      - à plus
+      - au revoir
+      - à plus tard
+      - bonne nuit
+      - bye
+      - au revoir
+      - passez une bonne journée
+      - à bientôt
+      - au revoir
+      - à plus tard
 
-- intent: goodbye
-  examples: |
-    - à plus
-    - au revoir
-    - à plus tard
-    - bonne nuit
-    - bye
-    - au revoir
-    - passez une bonne journée
-    - à bientôt
-    - au revoir
-    - à plus tard
+  - intent: affirm
+    examples: |
+      - oui
+      - y
+      - en effet
+      - bien sûr
+      - ça semble bien
+      - correct
 
-- intent: affirm
-  examples: |
-    - oui
-    - y
-    - en effet
-    - bien sûr
-    - ça semble bien
-    - correct
+  - intent: deny
+    examples: |
+      - non
+      - n
+      - jamais
+      - je ne pense pas
+      - je n'aime pas ça
+      - pas question
+      - pas vraiment
 
-- intent: deny
-  examples: |
-    - non
-    - n
-    - jamais
-    - je ne pense pas
-    - je n'aime pas ça
-    - pas question
-    - pas vraiment
+  - intent: mood_great
+    examples: |
+      - parfait
+      - génial
+      - incroyable
+      - je me sens comme un roi
+      - merveilleux
+      - je me sens très bien
+      - je vais bien
+      - je suis génial
+      - je vais sauver le monde
+      - super content
+      - extrêmement bien
+      - tellement parfait
+      - si bien
+      - si parfait
 
-- intent: mood_great
-  examples: |
-    - parfait
-    - génial
-    - incroyable
-    - je me sens comme un roi
-    - merveilleux
-    - je me sens très bien
-    - je vais bien
-    - je suis génial
-    - je vais sauver le monde
-    - super content
-    - extrêmement bien
-    - tellement parfait
-    - si bien
-    - si parfait
+  - intent: mood_unhappy
+    examples: |
+      - ma journée a été horrible
+      - je suis triste
+      - je ne me sens pas très bien
+      - je suis déçu
+      - super triste
+      - je suis tellement triste
+      - triste
+      - très triste
+      - malheureux
+      - pas bien
+      - pas très bien
+      - extrêmement triste
+      - tellement triste
+      - si triste
 
-- intent: mood_unhappy
-  examples: |
-    - ma journée a été horrible
-    - je suis triste
-    - je ne me sens pas très bien
-    - je suis déçu
-    - super triste
-    - je suis tellement triste
-    - triste
-    - très triste
-    - malheureux
-    - pas bien
-    - pas très bien
-    - extrêmement triste
-    - tellement triste
-    - si triste
-
-- intent: bot_challenge
-  examples: |
-    - es-tu un bot?
-    - es-tu un humain?
-    - est-ce que je parle à un bot?
-    - est-ce que je parle à un humain?
+  - intent: bot_challenge
+    examples: |
+      - es-tu un bot?
+      - es-tu un humain?
+      - est-ce que je parle à un bot?
+      - est-ce que je parle à un humain?

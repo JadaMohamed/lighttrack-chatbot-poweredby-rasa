@@ -14,28 +14,57 @@ entities:
   - priority_indicator
   - location
 
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+  priority:
+    type: categorical
+    values:
+      - urgent
+      - annoying
+      - very annoying
+    mappings:
+      - type: from_entity
+        entity: priority_indicator
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  - utter_complaint_received
+  - utter_ask_location
+
 responses:
   utter_greet:
-  - text: "Hey, comment je peux vous aider?"
+    - text: "Hey, comment je peux vous aider?"
 
   utter_cheer_up:
-  - text: "Voici de quoi vous remonter le moral:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Voici de quoi vous remonter le moral:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Est-ce que ça t'a aidé ?"
+    - text: "Est-ce que ça t'a aidé ?"
 
   utter_happy:
-  - text: "Super, continue !"
+    - text: "Super, continue !"
 
   utter_goodbye:
-  - text: "Au revoir"
+    - text: "Au revoir"
 
   utter_iamabot:
-  - text: "Je suis un bot."
+    - text: "Je suis un bot."
 
   utter_complaint_received:
-  - text: "Votre plainte a été reçue. Merci de nous l'avoir signalée."
+    - text: "Votre plainte concernant {location} a été reçue. Merci de nous en avoir informés."
+
+  utter_ask_location:
+    - text: "Pouvez-vous fournir localisation s'il vous plaît"
 
 session_config:
   session_expiration_time: 60

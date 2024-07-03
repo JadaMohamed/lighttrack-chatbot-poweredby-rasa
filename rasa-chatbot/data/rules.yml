@@ -1,18 +1,17 @@
 version: "3.1"
 
 rules:
+  - rule: Dites au revoir à chaque fois que l'utilisateur dit au revoir
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
 
-- rule: Dites au revoir à chaque fois que l'utilisateur dit au revoir
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Dites "Je suis un robot" à chaque fois que l'utilisateur vous lance un défi.
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
 
-- rule: Dites "Je suis un robot" à chaque fois que l'utilisateur vous lance un défi.
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
-- rule: Dite plainte a été reçue
-  steps:
-  - intent: light_complaint
-  - action: utter_complaint_received
+  # - rule: Dite plainte a été reçue
+  #   steps:
+  #     - intent: light_complaint
+  #     - action: utter_complaint_received
